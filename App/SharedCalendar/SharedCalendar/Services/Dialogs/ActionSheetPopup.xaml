@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedCalendar.Services.ActionSheetPopupPage"
+             BackgroundColor="Transparent"
+             xmlns:Behaviors="clr-namespace:LightForms.Behaviors;assembly=LightForms"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="True">
+    <Grid BackgroundColor="Transparent">
+        <BoxView Color="Transparent">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Back}" NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        
+        <Frame VerticalOptions="End" Padding="0">
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout Margin="15">
+                        <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="Medium" />
+                        <Label Text="{Binding Message}" HorizontalTextAlignment="Center" MaxLines="5" LineBreakMode="TailTruncation" />
+                    </StackLayout>
+                </StackLayout>
+                <ListView ItemsSource="{Binding Options}" SelectedItem="{Binding Option}" SelectionMode="Single" SeparatorColor="{DynamicResource OnBackground}" HeightRequest="{Binding ListHeight}" RowHeight="{Binding RowHeight}" HasUnevenRows="True"
+                          VerticalScrollBarVisibility="Never">
+                    <ListView.Behaviors>
+                        <Behaviors:ListViewRemoveSelectionBehavior />
+                        <Behaviors:ViewEventToCommandBehavior EventName="ItemSelected" Command="{Binding SelectOption}" />
+                    </ListView.Behaviors>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <BoxView Color="{DynamicResource OnBackground}" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Opacity="0.5" />
+                                    <Label Text="{Binding .}" TextColor="{DynamicResource Accent}" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="SharedCalendar.Controls.UnderlineTab"
+      Padding="15,0">
+
+    <Label x:Name="Lbl" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    <BoxView x:Name="UnderLine" VerticalOptions="End" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="-15,0" />
+
+</Grid>

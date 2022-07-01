@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "e0lyH2WHR7Vp82Px6K7vLvVxav70tnmiJhnvPViOht2vwnGCnzJ/Wr2tFV30m7kycoxxZ0oW3ibCSKlSV41X3g==",
+  "success": true,
+  "projectFilePath": "D:\\Proyectos\\WebSite\\SharedCalendar\\App\\SharedCalendar\\SharedCalendar\\SharedCalendar.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.1.0\\com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\lightforms\\3.3.0\\lightforms.3.3.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\lightforms.skeleton\\1.0.0\\lightforms.skeleton.1.0.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\microsoft.appcenter\\4.5.1\\microsoft.appcenter.4.5.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\microsoft.appcenter.analytics\\4.5.1\\microsoft.appcenter.analytics.4.5.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\microsoft.appcenter.crashes\\4.5.1\\microsoft.appcenter.crashes.4.5.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\plugin.ui.xaml\\2.3.1\\plugin.ui.xaml.2.3.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.ffimageloading.transformations\\2.4.11.982\\xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.forms\\5.0.0.2478\\xamarin.forms.5.0.0.2478.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.forms.tabs\\1.0.0\\xamarin.forms.tabs.1.0.0.nupkg.sha512",
+    "C:\\Users\\NEKSZ\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2478\\xamarin.forms.visual.material.5.0.0.2478.nupkg.sha512"
+  ],
+  "logs": []
+}

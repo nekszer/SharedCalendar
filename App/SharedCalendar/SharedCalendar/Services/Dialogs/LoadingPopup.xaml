@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedCalendar.Services.LoadingPopupPage"
+             xmlns:Xaml="clr-namespace:LightForms.Xaml;assembly=LightForms"
+             BackgroundColor="Transparent">
+    <Grid BackgroundColor="Transparent">
+        <BoxView Color="{DynamicResource Surface}" Opacity="0.3">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Back}" NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Frame VerticalOptions="Center" HorizontalOptions="Center" MinimumWidthRequest="300" WidthRequest="300" Padding="0">
+            <StackLayout>
+                <ActivityIndicator Color="{StaticResource Accent}" IsRunning="True" WidthRequest="25" HeightRequest="25" VerticalOptions="Center" Margin="20"  HorizontalOptions="{OnPlatform Default=Center, UWP=FillAndExpand}"/>
+                <Button Text="{Binding Cancel}" Command="{Binding Back}" BackgroundColor="{DynamicResource Surface}" TextColor="{DynamicResource Accent}" CornerRadius="0" IsVisible="{Binding IsCancelable}"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedCalendar.Services.ProgressPopupPage"
+             BackgroundColor="Transparent">
+    <Grid BackgroundColor="Transparent">
+        <BoxView Color="Transparent" Opacity="0.5">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding BtnCancel}" NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Frame VerticalOptions="Center" HorizontalOptions="Center" MinimumWidthRequest="300" WidthRequest="300" Padding="0">
+            <StackLayout>
+                <StackLayout Margin="15">
+                    <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="Medium" />
+                    <Label Text="{Binding Message}" HorizontalTextAlignment="Center"
+                       MaxLines="5" LineBreakMode="TailTruncation" />
+                    <ProgressBar Progress="{Binding Progress}" HorizontalOptions="FillAndExpand" />
+                    <Label Text="{Binding Progress, StringFormat='{0:P}'}" HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <Button Text="{Binding Cancel}" Command="{Binding BtnCancel}" BackgroundColor="{DynamicResource Surface}" TextColor="{DynamicResource Accent}" CornerRadius="0" IsVisible="{Binding IsCancelable}"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,2 @@
+AdbTarget=-s 172.19.131.153:5555
+AdbOptions=

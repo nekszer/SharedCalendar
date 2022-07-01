@@ -1,0 +1,14 @@
+﻿{
+  "Bienvenido a LightForms {0}": {
+    "es": "Bienvenido a LightForms {0}",
+    "en": "Welcome to LightForms {0}"
+  },
+  "Información": {
+    "es": "Información",
+    "en": "Information"
+  },
+  "Versión": {
+    "es": 3.1,
+    "en": 3.1
+  }
+}

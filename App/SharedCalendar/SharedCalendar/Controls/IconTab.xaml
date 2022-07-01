@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="SharedCalendar.Controls.IconTab"
+      Padding="15,5"
+      xmlns:Controls="clr-namespace:SharedCalendar.Controls"
+      RowSpacing="0">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+        
+    <Controls:Icon Grid.Row="0" x:Name="Icon" VerticalOptions="Center" />
+    <Label Grid.Row="1" x:Name="Lbl" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+</Grid>

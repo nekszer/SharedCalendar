@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedCalendar.Services.ConfirmationPopupPage"
+             BackgroundColor="Transparent">
+    <Grid BackgroundColor="Transparent">
+        <BoxView Color="Transparent">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Back}" CommandParameter="false" NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Frame VerticalOptions="Center" HorizontalOptions="Center" MinimumWidthRequest="300" WidthRequest="300" Padding="0">
+            <StackLayout>
+                <StackLayout Margin="15">
+                    <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="Medium" />
+                    <Label Text="{Binding Message}" HorizontalTextAlignment="Center"
+                       MaxLines="5" LineBreakMode="TailTruncation" />
+                </StackLayout>
+                <Grid ColumnSpacing="0">
+                    <Button Grid.Column="0" Text="{Binding Cancel}" Command="{Binding Back}" CommandParameter="false" BackgroundColor="DarkRed" TextColor="White" CornerRadius="0" />
+                    <Button Grid.Column="1" Text="{Binding Ok}" Command="{Binding Back}" CommandParameter="true" BackgroundColor="{DynamicResource Surface}" TextColor="{DynamicResource Accent}" CornerRadius="0" />
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="SharedCalendar.Themes.LightTheme">
+    <Color x:Key="Background">#efefef</Color>
+    <Color x:Key="Surface">White</Color>
+    <Color x:Key="OnBackground">Black</Color>
+    <Color x:Key="OnSurface">Black</Color>
+</ResourceDictionary>
