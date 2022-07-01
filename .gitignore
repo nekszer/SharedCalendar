@@ -1,0 +1,133 @@
+#-------------------------
+# Funcionamiento de archivos basura específicos
+#-------------------------
+
+# OS X
+.DS_Store
+. AppleDouble
+. LSOverride
+
+# Miniaturas de OS X
+._*
+
+# Cachés de archivos de imagen de Windows
+Pulgares.db
+ehthumbs.db
+Escritorio.ini
+
+# Papelera de reciclaje utilizada en recursos compartidos de archivos
+$RECYCLE. BOTE/
+
+# Archivos de Windows Installer
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Accesos directos de Windows
+*.lnk
+
+# Linux
+*~
+
+# Preferencias del directorio KDE
+.directory
+
+# Carpeta de la papelera de Linux que puede aparecer en cualquier partición o disco
+. Basura-*
+
+#-------------------------
+# Archivos de entorno
+#-------------------------
+# Estos nunca deben estar bajo control de versiones,
+# ya que representa un riesgo para la seguridad.
+.env
+.vagabundo
+Vagrantfile
+
+#-------------------------
+# Archivos temporales
+#-------------------------
+grabable/caché/*
+! grabable/cache/index.html
+
+grabable/logs/*
+! writable/logs/index.html
+
+grabable/sesión/*
+! grabable/sesión/índice.html
+
+grabable/cargas/*
+! writable/uploads/index.html
+
+writable/debugbar/*
+! writable/debugbar/.gitkeep
+
+grabable/**/*.db
+writable/**/*.sqlite
+
+php_errors.log
+
+#-------------------------
+# Guía del usuario Archivos temporales
+#-------------------------
+user_guide_src/construcción/*
+
+#-------------------------
+# Archivos de prueba
+#-------------------------
+pruebas/cobertura*
+
+# No guarde phpunit bajo control de versiones.
+phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+
+# Pruebas de módulos
+_modules/*
+
+# phpenv configuración local
+.php-versión
+
+# Editores de Jetbrains (PHPStorm, etc.)
+.idea/
+*.iml
+
+# Netbeans
+nbproject/
+construir/
+nbbuild/
+Dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# Texto sublime
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-proyecto
+.phpintel
+/API/
+
+# Código de Visual Studio
+.vscode/
+
+/Resultados/
+/phpunit*.xml
+/.phpunit. *.cache
+
+/.php-cs-fixer.php
+
+obj/
+bin/
