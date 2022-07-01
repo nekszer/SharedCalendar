@@ -42,6 +42,9 @@ class Documentation extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+    /**
+     * Funcion para guardar la documentacion del sitio web
+     */
     public function savedocs($path, $html) : bool {
         $numRows = $this->db->query("SELECT * FROM $this->table WHERE `path` = '$path'")->getNumRows();
         if($numRows > 0){
