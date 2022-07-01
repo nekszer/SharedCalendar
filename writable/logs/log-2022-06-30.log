@@ -1,0 +1,136 @@
+ERROR - 2022-06-30 21:35:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND accountId = 1 
+                        OR id IN (
+                     ...' at line 10
+CRITICAL - 2022-06-30 21:35:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND accountId = 1 
+                        OR id IN (
+                     ...' at line 10
+#0 D:\Proyectos\WebSite\SharedCalendar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT \r\n      ...', 0)
+#1 D:\Proyectos\WebSite\SharedCalendar\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 D:\Proyectos\WebSite\SharedCalendar\app\Models\Events.php(68): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(154): App\Models\Events->getEventsOfCalendar(NULL, '1')
+#5 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->event()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#7 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+ERROR - 2022-06-30 21:36:02 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id =  
+                        AND accountId = 1 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 1
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-06-30 21:36:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND accountId = 1 
+                        OR id IN (
+                     ...' at line 10
+CRITICAL - 2022-06-30 21:36:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND accountId = 1 
+                        OR id IN (
+                     ...' at line 10
+#0 D:\Proyectos\WebSite\SharedCalendar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT \r\n      ...', 0)
+#1 D:\Proyectos\WebSite\SharedCalendar\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 D:\Proyectos\WebSite\SharedCalendar\app\Models\Events.php(68): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(154): App\Models\Events->getEventsOfCalendar(NULL, '1')
+#5 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->event()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#7 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+ERROR - 2022-06-30 21:36:44 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 1 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 1
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-06-30 21:37:09 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-06-30 21:37:36 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-06-30 21:37:48 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-06-30 21:38:28 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )

@@ -1,0 +1,223 @@
+WARNING - 2022-05-12 16:32:57 --> acuse
+WARNING - 2022-05-12 16:32:57 --> acuse
+CRITICAL - 2022-05-12 16:56:53 --> Call to a member function hasMoved() on null
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 16:56:53 --> Call to a member function hasMoved() on null
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 16:57:05 --> Call to a member function hasMoved() on null
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 16:57:29 --> Call to a member function hasMoved() on null
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 16:57:54 --> Call to a member function getName() on null
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+ERROR - 2022-05-12 16:58:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key = 'CL1' LIMIT 1' at line 1
+CRITICAL - 2022-05-12 16:58:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key = 'CL1' LIMIT 1' at line 1
+#0 D:\Proyectos\WebSite\WebDocumentos\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Models\Client.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Dashboard.php(62): App\Models\Client->findClientIdByKey('CL1')
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+WARNING - 2022-05-12 16:59:54 --> SELECT * FROM client WHERE key = 'CL1' LIMIT 1
+ERROR - 2022-05-12 16:59:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key = 'CL1' LIMIT 1' at line 1
+CRITICAL - 2022-05-12 16:59:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key = 'CL1' LIMIT 1' at line 1
+#0 D:\Proyectos\WebSite\WebDocumentos\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Models\Client.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Dashboard.php(62): App\Models\Client->findClientIdByKey('CL1')
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+WARNING - 2022-05-12 17:00:44 --> SELECT * FROM client WHERE `key` = 'CL1' LIMIT 1
+WARNING - 2022-05-12 17:02:13 --> SELECT * FROM client WHERE `key` = 'CL1' LIMIT 1
+WARNING - 2022-05-12 17:02:13 --> SELECT * FROM client WHERE `key` = 'Pruebas 20220503 (2)' LIMIT 1
+CRITICAL - 2022-05-12 17:02:13 --> Attempt to read property "id" on null
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Models\Client.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 47)
+#1 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Dashboard.php(62): App\Models\Client->findClientIdByKey('Pruebas 2022050...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Dashboard->acuse()
+#3 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-12 17:19:24 --> Call to undefined method App\Models\Client::getFiles
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(13): CodeIgniter\Model->__call('getFiles', Array)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#3 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#6 {main}
+CRITICAL - 2022-05-12 17:20:42 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(11): view('client/index')
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#9 {main}
+CRITICAL - 2022-05-12 17:20:51 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(11): view('client/index')
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#9 {main}
+CRITICAL - 2022-05-12 17:21:14 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(11): view('client/index')
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#9 {main}
+CRITICAL - 2022-05-12 17:23:27 --> Undefined property: stdClass::$date
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Views\client\index.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Proyectos\\We...', 434)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include('D:\\Proyectos\\We...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#4 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(14): view('client/index', Array)
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#7 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+CRITICAL - 2022-05-12 17:23:40 --> Undefined property: stdClass::$date
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Views\client\index.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Proyectos\\We...', 434)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include('D:\\Proyectos\\We...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#4 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(14): view('client/index', Array)
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#7 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+CRITICAL - 2022-05-12 17:23:56 --> Cannot use object of type stdClass as array
+#0 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include()
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#3 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(14): view('client/index', Array)
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#9 {main}
+CRITICAL - 2022-05-12 17:24:04 --> Undefined property: stdClass::$date
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Views\client\index.php(434): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Proyectos\\We...', 434)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(210): include('D:\\Proyectos\\We...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Proyectos\WebSite\WebDocumentos\system\Common.php(1089): CodeIgniter\View\View->render('client/index', Array, true)
+#4 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Client.php(14): view('client/index', Array)
+#5 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Client->index()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#7 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#10 {main}
+CRITICAL - 2022-05-12 17:33:30 --> syntax error, unexpected token "return"
+#0 D:\Proyectos\WebSite\WebDocumentos\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('/client')
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('/client')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#6 {main}
+CRITICAL - 2022-05-12 17:39:59 --> Attempt to read property "path" on array
+#0 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Utils.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 27)
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#3 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#6 {main}
+CRITICAL - 2022-05-12 17:40:09 --> Class "Codeigniter\Files\File" not found
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 17:40:22 --> Class "Codeigniter\Files\File" not found
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 17:40:46 --> Class "Codeigniter\Files\File" not found
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 17:41:04 --> Class "Codeigniter\Files\File" not found
+#0 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#1 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-12 17:41:48 --> mime_content_type(uploads/1652392844_116ebbbd77a6e200bd58.pdf): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mime_content_ty...', 'D:\\Proyectos\\We...', 33)
+#1 D:\Proyectos\WebSite\WebDocumentos\app\Controllers\Utils.php(33): mime_content_type('uploads/1652392...')
+#2 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(832): App\Controllers\Utils->download('1')
+#3 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utils))
+#4 D:\Proyectos\WebSite\WebDocumentos\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\WebDocumentos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\WebDocumentos\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-12 17:56:55 --> Cannot declare class App\Database\Migrations\Account, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-12 17:57:26 --> Cannot declare class App\Database\Migrations\Receipt, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

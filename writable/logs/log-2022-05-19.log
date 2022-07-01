@@ -1,0 +1,123 @@
+ERROR - 2022-05-19 16:38:15 --> Table 'account' already exists
+ERROR - 2022-05-19 16:38:25 --> Table 'account' already exists
+ERROR - 2022-05-19 16:42:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"pending", "accept", "declined") NOT NULL,
+	CONSTRAINT `pk_calendarmember` PR...' at line 5
+ERROR - 2022-05-19 16:42:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''pending', 'accept', 'declined') NOT NULL,
+	CONSTRAINT `pk_calendarmember` PR...' at line 5
+CRITICAL - 2022-05-19 16:55:49 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(49): App\Models\Token->isValidToken(NULL)
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 16:56:27 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(49): App\Models\Token->isValidToken(Object(CodeIgniter\HTTP\Header))
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 16:57:12 --> Cannot use object of type CodeIgniter\HTTP\Header as array
+#0 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#1 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-19 16:57:40 --> Cannot access protected property CodeIgniter\HTTP\Header::$value
+#0 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#1 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-19 16:57:46 --> Cannot access protected property CodeIgniter\HTTP\Header::$name
+#0 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#1 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-19 17:00:05 --> Cannot access protected property CodeIgniter\HTTP\Header::$value
+#0 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#1 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#5 {main}
+CRITICAL - 2022-05-19 17:02:30 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:02:55 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:03:26 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:03:55 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:04:20 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:04:42 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 64)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:05:14 --> Attempt to read property "expires" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Models\Token.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 63)
+#1 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(58): App\Models\Token->isValidToken('7c2addfec473c55...')
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#4 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#7 {main}
+CRITICAL - 2022-05-19 17:05:38 --> Attempt to read property "accountId" on array
+#0 D:\Proyectos\WebSite\SharedCalendar\app\Controllers\Api.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Proyectos\\We...', 65)
+#1 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#2 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 D:\Proyectos\WebSite\SharedCalendar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Proyectos\WebSite\SharedCalendar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Proyectos\WebSite\SharedCalendar\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\We...')
+#6 {main}
