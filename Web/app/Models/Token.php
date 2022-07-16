@@ -65,6 +65,8 @@ class Token extends Model
      * Permite saber si el token es valido y la sesion no ha expirado
      */
     public function isValidToken($token) : bool {
+        if(empty($token))
+            return false;
         $tokenData = $this->where('token', $token)->findAll()[0];
         $date = strtotime($tokenData["expires"]);
         if(time() < $date) {

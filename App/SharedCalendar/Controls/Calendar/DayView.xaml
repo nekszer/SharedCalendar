@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedCalendar.Controls.DayView">
+    <Grid>
+        <BoxView  Color="DodgerBlue" IsVisible="{Binding Today}"/>
+        <BoxView Color="{AppThemeBinding Light='White', Dark='Black'}" Margin="2" IsVisible="{Binding Today}"/>
+        <BoxView Color="DodgerBlue" Margin="4" IsVisible="{Binding Today}"/>
+    </Grid>
+    <Grid IsVisible="{Binding IsSelected}">
+        <BoxView Color="DodgerBlue"/>
+        <BoxView Color="{AppThemeBinding Light='White', Dark='Black'}" Margin="2"/>
+        <BoxView Color="DodgerBlue" Margin="4"/>
+    </Grid>
+    <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" MaxLines="1" Padding="10">
+        <Label.Triggers>
+            <DataTrigger TargetType="Label" Binding="{Binding Enabled}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger TargetType="Label" Binding="{Binding Enabled}" Value="False">
+                <Setter Property="Opacity" Value="0.2" />
+            </DataTrigger>
+            <DataTrigger TargetType="Label" Binding="{Binding Today}" Value="True">
+                <Setter Property="Opacity" Value="0.2" />
+            </DataTrigger>
+            <DataTrigger TargetType="Label" Binding="{Binding IsSelected}" Value="True">
+                <Setter Property="TextColor" Value="White" />
+            </DataTrigger>
+            <DataTrigger TargetType="Label" Binding="{Binding IsSelected}" Value="False">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light='Black', Dark='White'}" />
+            </DataTrigger>
+        </Label.Triggers>
+    </Label>
+
+    <Grid VerticalOptions="End" IsVisible="{Binding HasEvents}">
+        <Frame BackgroundColor="DodgerBlue" Padding="0" Margin="0" WidthRequest="5" HeightRequest="5" CornerRadius="2.5"></Frame>
+    </Grid>
+    
+</Grid>

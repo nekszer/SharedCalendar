@@ -1,0 +1,44 @@
+CRITICAL - 2022-07-15 20:59:53 --> Undefined array key 0
+#0 D:\Proyectos\SharedCalendar\Web\app\Models\Token.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Proyectos\\Sh...', 68)
+#1 D:\Proyectos\SharedCalendar\Web\app\Controllers\Api.php(53): App\Models\Token->isValidToken('')
+#2 D:\Proyectos\SharedCalendar\Web\app\Controllers\Api.php(67): App\Controllers\Api->hasAuthorization(Array)
+#3 D:\Proyectos\SharedCalendar\Web\system\CodeIgniter.php(832): App\Controllers\Api->calendar()
+#4 D:\Proyectos\SharedCalendar\Web\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#5 D:\Proyectos\SharedCalendar\Web\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Proyectos\SharedCalendar\Web\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Proyectos\SharedCalendar\Web\system\Commands\Server\rewrite.php(43): require_once('D:\\Proyectos\\Sh...')
+#8 {main}
+ERROR - 2022-07-15 21:05:32 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )
+ERROR - 2022-07-15 23:01:31 --> SELECT 
+            * 
+        FROM events 
+        WHERE 
+            calendarId IN (
+                SELECT id 
+                FROM calendar c 
+                WHERE 
+                    c.id = 1 
+                        AND accountId = 2 
+                        OR id IN (
+                            SELECT calendarId 
+                            FROM calendarmember cm 
+                                WHERE cm.accountId = 2
+                                    AND status = 'accepted'
+                        )
+            )

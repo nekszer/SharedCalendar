@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             mc:Ignorable="d"
+             x:Class="SharedCalendar.Views.CalendarPage"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Xaml="clr-namespace:LightForms.Xaml;assembly=LightForms"
+             xmlns:Behaviors="clr-namespace:LightForms.Behaviors;assembly=LightForms"
+             xmlns:Transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:Lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:Controls="clr-namespace:SharedCalendar.Controls"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="True"
+             Visual="Material">
+
+
+    <TabbedPage.Children>
+        <ContentPage Title="Calendar" Padding="12">
+            <Controls:Calendar x:Name="CalendarView">
+
+            </Controls:Calendar>
+        </ContentPage>
+        <ContentPage Title="Miembros" Padding="12">
+            <ListView ItemsSource="{Binding Members}" SelectedItem="{Binding Member}">
+                <ListView.Behaviors>
+                    <Behaviors:ListViewRemoveSelectionBehavior />
+                    <Behaviors:ViewEventToCommandBehavior EventName="ItemSelected" Command="{Binding Command}" CommandParameter="{Binding Member}" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentPage>
+    </TabbedPage.Children>
+
+</TabbedPage>

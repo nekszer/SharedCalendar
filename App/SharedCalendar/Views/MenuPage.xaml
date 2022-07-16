@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            mc:Ignorable="d"
+            x:Class="SharedCalendar.Views.MenuPage"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:Xaml="clr-namespace:LightForms.Xaml;assembly=LightForms"
+            xmlns:Behaviors="clr-namespace:LightForms.Behaviors;assembly=LightForms"
+            xmlns:Transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+            xmlns:Lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+            xmlns:UI="clr-namespace:Plugin.UI.Xaml;assembly=Plugin.UI.Xaml"
+            xmlns:Images="clr-namespace:SharedCalendar.Resources.Images"
+            xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:Views="clr-namespace:SharedCalendar.Views"
+            xmlns:Controls="clr-namespace:SharedCalendar.Controls"
+            iOS:Page.UseSafeArea="True"
+            Visual="Material">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <Grid RowDefinitions="Auto, *">
+                <Grid Grid.Row="0" Padding="12">
+                    <UI:Image Aspect="AspectFill" Source="{Images:EmbeddedResource Icon.png}" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
+                </Grid>
+                <ListView Grid.Row="1" ItemsSource="{Binding RouteItems}" SelectedItem="{Binding RouteItem}">
+                    <ListView.Behaviors>
+                        <Behaviors:ListViewRemoveSelectionBehavior />
+                        <Behaviors:ViewEventToCommandBehavior EventName="ItemSelected" Command="{Binding RouteSelected}" />
+                    </ListView.Behaviors>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="12" Orientation="Horizontal" Spacing="6">
+                                    <Controls:Icon Glyph="{Binding Icon}" WidthRequest="25" HeightRequest="25" Color="{DynamicResource OnBackground}" />
+                                    <Label Text="{Binding Title}" FontSize="Subtitle" VerticalTextAlignment="Center" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <!-- Cambiar si es necesario -->
+                <Views:WelcomePage xmlns:Lightforms="clr-namespace:LightForms;assembly=LightForms" Lightforms:ViewModelLocator.AutoWireViewModel="True" />
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+    
+</FlyoutPage>

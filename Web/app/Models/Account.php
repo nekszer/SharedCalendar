@@ -59,6 +59,22 @@ class Account extends Model
         return "/";
     }
 
+    public function signUp ($email, $password) {
+        $first = $this->where('email', $email)->first();
+        if($first != null) {
+            return "El email ya existe";
+        }
+        $newCipherPass = md5($password);
+        $insertID = $this->insert([
+            'email' => $email,
+            'password' => $newCipherPass
+        ]);
+        if($insertID > 0){
+            return;
+        }
+        return "No podemos registrarte";
+    }
+
     /**
      * realiza la recuperacion de la contraseña
      * @return bool

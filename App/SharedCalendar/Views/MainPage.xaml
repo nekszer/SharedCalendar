@@ -19,9 +19,31 @@
              xmlns:Local="clr-namespace:SharedCalendar">
 
     <Grid>
-        <StackLayout VerticalOptions="Center">
-            <UI:Image Source="{Images:EmbeddedResource Icon.png}" WidthRequest="150" HeightRequest="150" Aspect="AspectFill" />
-            <Label Text="{Binding LightFormsVersion, StringFormat={Xaml:Translate 'Bienvenido a LightForms {0}', Route={x:Static Local:Routes.Main}}}" HorizontalTextAlignment="Center" />
+        <StackLayout VerticalOptions="Center" Padding="12">
+            <Label Text="{Binding Email.Errors, Converter={StaticResource FirstValidationErrorConverter}}" TextColor="Red" IsVisible="{Binding Email.IsValid, Converter={StaticResource InvertBooleanConverter}}" />
+            <Entry Text="{Binding Email.Value}" ReturnType="Next" Placeholder="Email" Keyboard="Email">
+                <Entry.Triggers>
+                    <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="False">
+                        <Setter Property="TextColor" Value="Red" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="True">
+                        <Setter Property="TextColor" Value="{DynamicResource OnBackground}" />
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <Label Text="{Binding Password.Errors, Converter={StaticResource FirstValidationErrorConverter}}" TextColor="Red" IsVisible="{Binding Password.IsValid, Converter={StaticResource InvertBooleanConverter}}" />
+            <Entry Text="{Binding Password.Value}" ReturnType="Next" Placeholder="Contraseña" IsPassword="True">
+                <Entry.Triggers>
+                    <DataTrigger TargetType="Entry" Binding="{Binding User.IsValid}" Value="False">
+                        <Setter Property="TextColor" Value="Red" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Entry" Binding="{Binding User.IsValid}" Value="True">
+                        <Setter Property="TextColor" Value="{DynamicResource OnBackground}" />
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <Button Text="Ingresar" Command="{Binding BtnLogin}" />
+            <Button Text="Registrarse" Command="{Binding BtnSignUp}" />
         </StackLayout>
     </Grid>
 

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             mc:Ignorable="d"
+             x:Class="SharedCalendar.Views.SignUpPage"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Xaml="clr-namespace:LightForms.Xaml;assembly=LightForms"
+             xmlns:Behaviors="clr-namespace:LightForms.Behaviors;assembly=LightForms"
+             xmlns:Transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:Lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:UI="clr-namespace:Plugin.UI.Xaml;assembly=Plugin.UI.Xaml"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="True"
+             Visual="Material">
+
+    <StackLayout VerticalOptions="Center" Padding="12">
+        <Label Text="{Binding Email.Errors, Converter={StaticResource FirstValidationErrorConverter}}" TextColor="Red" IsVisible="{Binding Email.IsValid, Converter={StaticResource InvertBooleanConverter}}" />
+        <Entry Text="{Binding Email.Value}" ReturnType="Next" Placeholder="Email" Keyboard="Email">
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="False">
+                    <Setter Property="TextColor" Value="Red" />
+                </DataTrigger>
+                <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="True">
+                    <Setter Property="TextColor" Value="{DynamicResource OnBackground}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Label Text="{Binding Password.Errors, Converter={StaticResource FirstValidationErrorConverter}}" TextColor="Red" IsVisible="{Binding Password.IsValid, Converter={StaticResource InvertBooleanConverter}}" />
+        <Entry Text="{Binding Password.Value}" ReturnType="Next" Placeholder="Contraseña" IsPassword="True">
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding User.IsValid}" Value="False">
+                    <Setter Property="TextColor" Value="Red" />
+                </DataTrigger>
+                <DataTrigger TargetType="Entry" Binding="{Binding User.IsValid}" Value="True">
+                    <Setter Property="TextColor" Value="{DynamicResource OnBackground}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Button Text="Registrarse" Command="{Binding BtnSignUp}" />
+    </StackLayout>
+
+</ContentPage>
