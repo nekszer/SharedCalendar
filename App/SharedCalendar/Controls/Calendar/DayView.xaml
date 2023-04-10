@@ -31,9 +31,7 @@
             </DataTrigger>
         </Label.Triggers>
     </Label>
-
     <Grid VerticalOptions="End" IsVisible="{Binding HasEvents}">
         <Frame BackgroundColor="DodgerBlue" Padding="0" Margin="0" WidthRequest="5" HeightRequest="5" CornerRadius="2.5"></Frame>
     </Grid>
-    
 </Grid>

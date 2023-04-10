@@ -84,6 +84,7 @@ namespace SharedCalendar.ViewModels
             var action = RouteItem.Action;
             var route = RouteItem.Route;
             var ispopup = RouteItem.IsPopup;
+            var data = RouteItem.Data;
             if (string.IsNullOrEmpty(route)) return;
             var flyout = View as Xamarin.Forms.FlyoutPage;
             flyout.IsPresented = false;
@@ -97,8 +98,8 @@ namespace SharedCalendar.ViewModels
                         return;
                 }
                 var json = "";
-                if(RouteItem.Data != null)
-                    json = JsonConvert.SerializeObject(RouteItem.Data);
+                if(data != null)
+                    json = JsonConvert.SerializeObject(data);
                 var task = !ispopup ? Navigation.PushAsync(route, json, ReplaceAction.MasterDetailPage) : Navigation.PushModalAsync(route);
                 await Xamarin.Essentials.MainThread.InvokeOnMainThreadAsync(async () => await task);
             });

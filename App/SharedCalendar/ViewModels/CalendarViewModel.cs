@@ -31,6 +31,7 @@ namespace SharedCalendar.ViewModels
 
             CalendarView = FindViewByName<SharedCalendar.Controls.Calendar>("CalendarView");
             CalendarView.MonthChanged += CalendarView_MonthChanged;
+            CalendarView.DaySelected += CalendarView_DaySelected;
 
             var apiService = Container.Create<IApiService>();
             apiService.GetEventsOfCalendar(calendar.Id).ContinueWith(t =>
@@ -41,13 +42,23 @@ namespace SharedCalendar.ViewModels
             });
         }
 
+        private void CalendarView_DaySelected(object sender, Controls.IDay e)
+        {
+            if (e.HasEvents)
+                System.Diagnostics.Debug.WriteLine("Tiene Eventos", "Shared Calendar");
+        }
+
         private void CalendarView_MonthChanged(object sender, Controls.IMonth e)
         {
             var startDate = new DateTime(e.Year, e.Number, 1);
             var endDate = new DateTime(e.Year, e.Number, e.DaysInMonth);
 
+            if (EventsOfCalendar.Count < 1)
+                return;
+
             foreach (var day in e.Days)
             {
+                System.Diagnostics.Debug.WriteLine(day.Title);
                 var eventsOfDay = EventsOfCalendar.Where(@event =>
                 {
                     var eventDate = DateTime.Parse(@event.Day);
@@ -57,7 +68,6 @@ namespace SharedCalendar.ViewModels
                 foreach (var @event in eventsOfDay)
                     day.AddEvent(new Controls.Event(@event.Id, @event.Name, @event));
             }
-
         }
     }
 }

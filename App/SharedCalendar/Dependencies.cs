@@ -33,7 +33,13 @@ namespace SharedCalendar
             container.RegisterFactory<NotificationAction, INotificationAction>();
 
             /// APIs
-            container.Register<IApiService>((container) => new ApiService("http://sharedcalendar.aliensofttech.com"), FetchTarget.Singleton);;
+            container.Register<IApiService>((container) =>
+            {
+                var apiService = new ApiService("http://sharedcalendar.aliensofttech.space");
+                apiService.SetStorage(new ApiStorage());
+                apiService.LoadStorage();
+                return apiService;
+            }, FetchTarget.Singleton);
         }
     }
 }

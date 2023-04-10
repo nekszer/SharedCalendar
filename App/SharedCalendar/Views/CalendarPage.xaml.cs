@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace SharedCalendar.Views
@@ -9,6 +10,8 @@ namespace SharedCalendar.Views
         public CalendarPage()
         {
             InitializeComponent();
+            CalendarView.StartDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            CalendarView.EndDate = new DateTime(DateTime.Now.Year, 12, 31);
         }
     }
 }

@@ -18,7 +18,12 @@
     <TabbedPage.Children>
         <ContentPage Title="Calendar" Padding="12">
             <Controls:Calendar x:Name="CalendarView">
-
+                <Controls:Calendar.RightArrow>
+                    <FontImageSource Glyph="uf053" FontFamily="FontAwesome" Color="{DynamicResource OnBackground}" />
+                </Controls:Calendar.RightArrow>
+                <Controls:Calendar.LeftArrow>
+                    <FontImageSource Glyph="uf054" FontFamily="FontAwesome" Color="{DynamicResource OnBackground}" />
+                </Controls:Calendar.LeftArrow>
             </Controls:Calendar>
         </ContentPage>
         <ContentPage Title="Miembros" Padding="12">

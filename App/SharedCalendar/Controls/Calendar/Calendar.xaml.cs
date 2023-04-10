@@ -223,7 +223,6 @@ namespace SharedCalendar.Controls
                     RightImage.Source = RightArrow;
                 })
             };
-            SetViewModel();
         }
 
         public IMonth GetCurrentMonth()
@@ -261,7 +260,6 @@ namespace SharedCalendar.Controls
                     Grid.SetRow(view, i);
                     Grid.SetColumn(view, j);
                     Days.Children.Add(view);
-                    System.Diagnostics.Debug.WriteLine("Added view to Calendar Days");
                 }
             }
         }
@@ -283,7 +281,6 @@ namespace SharedCalendar.Controls
         internal void AddDay(int row, int col, IDay day)
         {
             AddCount();
-            System.Diagnostics.Debug.WriteLine($"{row},{col} = {day?.Title ?? string.Empty}");
             if (Days == null) return;
             if (Days.Children.Count <= 0) return;
             DayView view = null;
@@ -298,9 +295,7 @@ namespace SharedCalendar.Controls
                 }
             }
             var found = view != null ? "View found" : "View Not found";
-            System.Diagnostics.Debug.WriteLine(found);
             if (view == null) return;
-            System.Diagnostics.Debug.WriteLine("Binding Context Added To View");
             Device.BeginInvokeOnMainThread(() => view.BindingContext = day);
         }
 

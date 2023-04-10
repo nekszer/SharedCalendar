@@ -17,7 +17,6 @@ namespace SharedCalendar
             {
                 var navpage = BaseTheme
                     .Instance
-                    .SetTheme(OSAppTheme.Dark, true)
                     .SetNavigationPageStyle(new NavigationPage(root));
                 return navpage;
             };

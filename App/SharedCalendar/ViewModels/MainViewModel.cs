@@ -78,10 +78,15 @@ namespace SharedCalendar.ViewModels
             Email.ValueChanged += Form_ValueChanged;
             Password.ValueChanged += Form_ValueChanged;
             BtnSignUp = new AsyncCommand(BtnSignUp_Click);
+
             #region DEBUG
             Email.Value = "nekszer@gmail.com";
             Password.Value = "123456";
             #endregion
+
+            var apiService = Container.Create<IApiService>();
+            if (apiService.IsAuthenticated())
+                Navigation.PushAsync(Routes.Menu, LightForms.Services.ReplaceAction.MasterDetailPage);
         }
 
         private Task BtnSignUp_Click(object arg)

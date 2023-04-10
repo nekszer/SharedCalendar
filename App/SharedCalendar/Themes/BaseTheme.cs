@@ -45,25 +45,27 @@ namespace SharedCalendar.Themes
             return action.Invoke(Resources);
         }
 
-        public BaseTheme SetTheme(OSAppTheme theme, bool setnavpagestyle = true)
+        public void LoadResources(OSAppTheme theme)
         {
             Resources.MergedDictionaries.Clear();
             Resources.MergedDictionaries.Add(new CommonTheme());
+            Resources.MergedDictionaries.Add(theme == OSAppTheme.Light ? new LightTheme() : new DarkTheme());
+        }
+
+        public BaseTheme SetTheme(OSAppTheme theme, bool setnavpagestyle = true)
+        {
+            LoadResources(theme);
             switch (theme)
             {
                 default:
                 case OSAppTheme.Unspecified:
                 case OSAppTheme.Light:
-                    Resources.MergedDictionaries.Add(new LightTheme());
                     var accent = (Color)Resources["Accent"];
                     var onaccent = (Color)Resources["OnAccent"];
-                    System.Diagnostics.Debug.WriteLine(accent.ToHex());
-                    System.Diagnostics.Debug.WriteLine(onaccent.ToHex());
                     CrossContainer.Instance.Create<IStatusBarPlatformSpecific>()?.SetStatusBarColor(accent, onaccent);
                     break;
 
                 case OSAppTheme.Dark:
-                    Resources.MergedDictionaries.Add(new DarkTheme());
                     CrossContainer.Instance.Create<IStatusBarPlatformSpecific>()?.SetStatusBarColor(Color.Black, Color.White);
                     break;
             }
@@ -76,6 +78,7 @@ namespace SharedCalendar.Themes
 
         public NavigationPage SetNavigationPageStyle(NavigationPage navigation)
         {
+            LoadResources(Theme);
             navigation.BarBackgroundColor = Theme == OSAppTheme.Light ?
                        (Color)Resources["Accent"] :
                        (Color)Resources["Surface"];

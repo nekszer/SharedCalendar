@@ -30,6 +30,8 @@ namespace SharedCalendar.Services
                 {
                     var json = await response.Content.ReadAsStringAsync();
                     AccessToken = JsonConvert.DeserializeObject<AccessToken>(json);
+                    if (Storage != null)
+                        Storage.Save(AccessToken.Token);
                     return !string.IsNullOrEmpty(AccessToken.Token);
                 }
                 return false;
@@ -39,6 +41,15 @@ namespace SharedCalendar.Services
                 System.Diagnostics.Debug.WriteLine(ex.Message);
                 return false;
             }
+        }
+
+        public async void LoadStorage()
+        {
+            var token = await Storage.Read();
+            AccessToken = new AccessToken
+            {
+                Token = token
+            };
         }
         #endregion
 
@@ -120,7 +131,13 @@ namespace SharedCalendar.Services
 
         public bool IsAuthenticated()
         {
-            return AccessToken != null;
+            return AccessToken != null && !string.IsNullOrEmpty(AccessToken.Token);
+        }
+
+        private IStorage Storage { get; set; }
+        public void SetStorage(IStorage storage)
+        {
+            Storage = storage;
         }
     }
 }

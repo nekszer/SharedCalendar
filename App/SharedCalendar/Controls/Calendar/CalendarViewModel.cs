@@ -47,19 +47,17 @@ namespace SharedCalendar.Controls
 
         private void OnMonthChanged(IMonth value)
         {
-            try
+            Task.Run(() =>
             {
-                Task.Run(() =>
+                try
                 {
                     if (value == null) return;
-                    System.Diagnostics.Debug.WriteLine(value.Title, "OnMonthChanged");
                     int row = 0;
                     int col = 0;
                     for (int i = 0; i < value.Days.Count; i++)
                     {
                         var day = value.Days[i];
                         Calendar.AddDay(row, col, day);
-                        System.Diagnostics.Debug.WriteLine($"{row},{col}", "OnMonthChanged");
                         if ((col + 1) % 7 == 0)
                         {
                             col = 0;
@@ -71,12 +69,12 @@ namespace SharedCalendar.Controls
                         }
                     }
                     Calendar.OnMonthChanged(value);
-                });
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex);
-            }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex);
+                }
+            });
         }
 
         #region Notified Property Day
@@ -143,6 +141,7 @@ namespace SharedCalendar.Controls
         }
 
         private Day CurrentDay { get; set; }
+
         /// <summary>
         /// Set isselected a true
         /// </summary>

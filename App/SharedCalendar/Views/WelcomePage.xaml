@@ -14,7 +14,32 @@
              iOS:Page.UseSafeArea="True"
              Visual="Material">
 
-    <StackLayout Padding="12">
-        <Label Text="Bienvenido a Shared Calendar" HorizontalTextAlignment="Center" />
-    </StackLayout>
+    <Grid>
+        <StackLayout Padding="12">
+            <Label Text="Tus eventos" HorizontalTextAlignment="Center" />
+            <ListView ItemsSource="{Binding Events}" SelectedItem="{Binding Event}">
+                <ListView.Behaviors>
+                    <Behaviors:ListViewRemoveSelectionBehavior />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="4">
+                                <StackLayout>
+                                    <Grid ColumnDefinitions="*, Auto">
+                                        <Label Grid.Column="0" Text="{Binding Name}" />
+                                        <Label Grid.Column="1" Text="{Binding Day}" />
+                                    </Grid>
+                                    <Label Text="{Binding Description}" FontSize="Caption" MaxLines="3" LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding CalendarName, StringFormat='Calendario: {0}'}" FontAttributes="Bold" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Button Text="+" FontSize="Large" Padding="0" VerticalOptions="End" HorizontalOptions="End" Margin="10" CornerRadius="25" HeightRequest="50" WidthRequest="50"
+                BackgroundColor="{DynamicResource Accent}" TextColor="{DynamicResource OnAccent}"/>
+    </Grid>
 </ContentPage>

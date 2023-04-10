@@ -7,11 +7,18 @@ namespace SharedCalendar.Services
 {
     public interface IApiService
     {
+        void SetStorage(IStorage storage);
         Task<bool> SignIn(string email, string password);
         Task<bool> SignUp(string email, string password);
         Task<List<Calendar>> GetCalendars();
         Task<List<Event>> GetEventsOfCalendar(int idCalendar);
         bool IsAuthenticated();
+    }
+
+    public interface IStorage
+    {
+        void Save(string value);
+        Task<string> Read();
     }
 
     public class Event
@@ -51,6 +58,7 @@ namespace SharedCalendar.Services
 
         [JsonProperty("accountId")]
         public int AccountId { get; set; }
+        public string CalendarName { get; set; }
     }
 
     public class Calendar
